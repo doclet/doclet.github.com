@@ -1,3 +1,4 @@
+/*
 #exampleImagesDiv {
   background-color:#dddddd;
   -moz-border-radius: 10px;
@@ -17,11 +18,15 @@
 #exampleImagesDiv .sel {
 	background-color:#666666;
 }
+*/
 
 #downloadTexdocletDiv a {
   float:left;
+  margin-right:20px;
 }
 
 #downloadTexdocletDiv img {
-	width:100;
+	width:90;
+  border:none;
+  box-shadow: 0 0 0px #EBEBEB;
 }
