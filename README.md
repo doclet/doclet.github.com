@@ -2,8 +2,7 @@ TeXDoclet is a Java doclet implementation that generates a LaTeX file from you J
 
 The doclet is based on the doclet originally created by Greg Wonderly of
 [C2 technologies Inc.](http://www.c2-tech.com>) and its revision by Soeren Caspersen of
-[XO Software](http://www.xosoftware.dk). The project of Greg Wonderly is available here: 
-<http://java.net/projects/texdoclet>.
+[XO Software](http://www.xosoftware.dk).
 
 Example outputs
 ---------------
@@ -65,7 +64,7 @@ The *TeXDoclet* source code is hosted on *Github* in the *Git* repository `https
 Usage
 -----
 
-Generally a Java documentation is created with the *javadoc* tool (and its default doclet) that comes along with the Java JRE/JDK installation. To create a Java documentation with a doclet other than the default doclet you have specify the doclet with the `-docletpath` and `-doclet` parameters of the *javadoc* tool :
+Generally a Java documentation is created with the *javadoc* tool (and its default doclet) that comes along with the Java JRE/JDK installation. To create a Java documentation with a doclet other than the default doclet you have to specify the doclet with the `-docletpath` and `-doclet` parameters of the *javadoc* tool :
 
 	javadoc -docletpath <path to doclet .jar file> -doclet <doclet class name>
 
@@ -95,17 +94,23 @@ Then the following example *javadoc* execution builds Javadoc documentation from
 		-sourcepath src/main/java \
 		-subpackages org:com
 
-All parameters beside `-docletpath` and `-doclet` are special *TeXDoclet* parameters here. The command produces the output file `out.tex`LaTeX in the current working directory.
+All arguments beside `-docletpath` and `-doclet` are special *TeXDoclet* arguments here. The command produces the output file `out.tex`LaTeX in the current working directory.
 
 ### Example javadoc calls
 
 See `createDocs.sh` scripts in `/examples` [subdirectory](https://github.com/doclet/texdoclet/tree/master/examples) of the github project for more examples.
 
-### TeXDoclet configuration
+### TeXDoclet output configuration
 
-*TeXDoclet* doclet is configured by parameters passed to the doclet by the *javadoc* execution. There are a lot of parameters that affect the Latex document output. Print help to get a complete list of parameters you can pass to the *TeXDoclet* doclet :
+*TeXDoclet* doclet is configured by arguments passed to the doclet by the *javadoc* execution. There are a lot of defined parameters to affect the Latex document output. Print help to get a complete list of parameters you can pass to the *TeXDoclet* doclet :
 
-	javadoc -docletpath path/to/TeXDoclet.jar -doclet org.stfm.texdoclet.TeXDoclet
+Print help (TeXDoclet + javadoc help) :
+
+	javadoc -docletpath target/TeXDoclet.jar -doclet org.stfm.texdoclet.TeXDoclet
+
+or (TeXDoclet help only) :
+
+	java -jar target/TeXDoclet.jar -h
 
 	-title <title>            A title to use for the generated output document.
 	-subtitle <title>         A subtitle for the output document. No -title will result in no title page.
@@ -139,5 +144,9 @@ See `createDocs.sh` scripts in `/examples` [subdirectory](https://github.com/doc
 	-sectionlevel <level>     Specifies the highest level of sections (either "subsection", "section" or "chapter").
 	-imagespath               Path to the texdoclet_images dir (absolute or relative to the output document .tex file).
 
+Previous versions
+-----------------
 
+- The intitial project of Greg Wonderly is available here : <http://java.net/projects/texdoclet>.
+- Its [revision](http://egee-jra1-integration.web.cern.ch/egee-jra1-integration/repository/texdoclet/1.3/share/README.txt) by Soeren Caspersen you find here : <http://egee-jra1-integration.web.cern.ch/egee-jra1-integration/repository/texdoclet>.
 
