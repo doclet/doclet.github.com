@@ -1,0 +1,27 @@
+#exampleImagesDiv {
+  background-color:#dddddd;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#exampleImagesDiv img {
+  width:150;
+  height:130;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color:#999999;
+  padding:4px;
+  margin:5px;
+}
+
+#exampleImagesDiv .sel {
+	background-color:#666666;
+}
+
+#downloadTexdocletDiv a {
+  float:left;
+}
+
+#downloadTexdocletDiv img {
+	width:100;
+}
