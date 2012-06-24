@@ -117,21 +117,19 @@
           &lt;subpackages and java code&gt;
 </code></pre>
 
-<p>Then the following example <em>javadoc</em> execution builds Javadoc documentation from Java sources located in <code>src/main/java</code> subdirectory for all packages starting with <code>org</code> and <code>com</code> :</p>
+<p>Then the following example <em>javadoc</em> execution builds Javadoc documentation (in <code>out.tex</code>) from Java sources located in <code>src/main/java</code> subdirectory for all packages starting with <code>org</code> and <code>com</code> :</p>
 
 <pre><code>javadoc -docletpath path/to/TeXDoclet.jar \
     -doclet org.stfm.texdoclet.TeXDoclet \
+    -sourcepath src/main/java \
+    -subpackages org:com \
     -noindex \
     -tree \
     -hyperref \
     -output out.tex \
     -title "My Title" \
-    -author "My Name" \
-    -sourcepath src/main/java \
-    -subpackages org:com
+    -author "My Name"
 </code></pre>
-
-<p>All arguments beside <code>-docletpath</code> and <code>-doclet</code> are special <em>TeXDoclet</em> arguments. The command produces the output file <code>out.tex</code>LaTeX in the current working directory.</p>
 
 <h3>Example javadoc calls</h3>
 

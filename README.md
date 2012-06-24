@@ -81,7 +81,7 @@ Assuming you have the following project structure :
             org
               <subpackages and java code>
 
-Then the following example *javadoc* execution builds Javadoc documentation from Java sources located in `src/main/java` subdirectory for all packages starting with `org` and `com` :
+Then the following example *javadoc* execution builds Javadoc documentation (in `out.tex`) from Java sources located in `src/main/java` subdirectory for all packages starting with `org` and `com` :
 
 	javadoc -docletpath path/to/TeXDoclet.jar \
 		-doclet org.stfm.texdoclet.TeXDoclet \
@@ -93,8 +93,6 @@ Then the following example *javadoc* execution builds Javadoc documentation from
 		-author "My Name" \
 		-sourcepath src/main/java \
 		-subpackages org:com
-
-All arguments beside `-docletpath` and `-doclet` are special *TeXDoclet* arguments here. The command produces the output file `out.tex`LaTeX in the current working directory.
 
 ### Example javadoc calls
 
