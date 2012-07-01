@@ -169,11 +169,18 @@
 -pdfhyperref              Use the hyperref package with pdf. Overrides -hypertex.
 -version                  Includes version-tags .
 -hr                       Prints horizontal rows in the output (to get a better? view).
--include                  Creates output without latex initiation (writes it in initdocsinclude.tex), titlepage, contents.
+-include                  Creates output in two seperated latex documents: one for the preamble part and another for the actual java documentation content.
 -sectionlevel &lt;level&gt;     Specifies the highest level of sections (either "subsection", "section" or "chapter").
 -imagespath               Path to the texdoclet_images dir (absolute or relative to the output document .tex file).
+-tablescale &lt;factor&gt;      Scale factor to specify width of tables. Default value is 0.9.
 </code></pre>
-
+<h3 id="how-to-use-generated-javadoc-in-your-own-document">How to use generated javadoc in your own document</h3>
+<p>If you want to use TeXDoclet output in your own LaTeX document, simply use option <code>-include</code> to generate two .tex files that you have to insert in your LaTeX document for instance by using the <code>\input{}</code> LaTeX command :</p>
+<ul>
+<li>TeXDoclet_preamble.tex : to include in the preamble part of your document.</li>
+<li>TeXDoclet.tex : this is the actual java documentation content that you can place wherever you want between <code>\\begin{document}</code> and <code>\\end{document}</code> in your LaTeX document.</li>
+</ul>
+<p>See example 4 in the <code>/examples/example4_include</code> <a href="https://github.com/doclet/texdoclet/tree/master/examples/example4_include">subdirectory</a> of the github project for more info.</p>
 <h2 id="previous-versions">Previous versions</h2>
 <ul>
 <li>The intitial project of Greg Wonderly is available here : <a href="http://java.net/projects/texdoclet"><code class="url">http://java.net/projects/texdoclet</code></a>.</li>
