@@ -143,12 +143,12 @@ or (TeXDoclet help only) :
 	-imagespath               Path to the texdoclet_images dir (absolute or relative to the output document .tex file).
 	-tablescale <factor>      Scale factor to specify width of tables. Default value is 0.9.
 
-### How to use generated javadoc in your own document
+### How to use generated LaTeX documentation in your own document
 
-If you want to use TeXDoclet output in your own LaTeX document, simply use option `-include` to generate two .tex files that you have to insert in your LaTeX document for instance by using the `\input{}` LaTeX command : 
+If you want to use TeXDoclet output in your own LaTeX document, simply use option `-include`. Option `-include` produces two .tex files that you have to insert in your LaTeX document (for instance by using the `\input{}` LaTeX command) : 
 
-- TeXDoclet_preamble.tex : to include in the preamble part of your document.
-- TeXDoclet.tex : this is the actual java documentation content that you can place wherever you want between `\\begin{document}` and `\\end{document}` in your LaTeX document. 
+- TeXDoclet_preamble.tex : to include in the preamble part of your LaTeX document.
+- TeXDoclet.tex : this is the actual java documentation content that you can place wherever you want between `\begin{document}` and `\end{document}` in your LaTeX document. 
 
 See example 4 in the `/examples/example4_include` [subdirectory](https://github.com/doclet/texdoclet/tree/master/examples/example4_include) of the github project for more info.
 

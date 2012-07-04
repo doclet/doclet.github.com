@@ -175,10 +175,10 @@
 -tablescale &lt;factor&gt;      Scale factor to specify width of tables. Default value is 0.9.
 </code></pre>
 <h3 id="how-to-use-generated-javadoc-in-your-own-document">How to use generated javadoc in your own document</h3>
-<p>If you want to use TeXDoclet output in your own LaTeX document, simply use option <code>-include</code> to generate two .tex files that you have to insert in your LaTeX document for instance by using the <code>\input{}</code> LaTeX command :</p>
+<p>If you want to use TeXDoclet output in your own LaTeX document, simply use option <code>-include</code>. Option <code>-include</code> produces two .tex files that you have to insert in your LaTeX document (for instance by using the <code>\input{}</code> LaTeX command) :</p>
 <ul>
-<li>TeXDoclet_preamble.tex : to include in the preamble part of your document.</li>
-<li>TeXDoclet.tex : this is the actual java documentation content that you can place wherever you want between <code>\\begin{document}</code> and <code>\\end{document}</code> in your LaTeX document.</li>
+<li>TeXDoclet_preamble.tex : to include in the preamble part of your LaTeX document.</li>
+<li>TeXDoclet.tex : this is the actual java documentation content that you can place wherever you want between <code>\begin{document}</code> and <code>\end{document}</code> in your LaTeX document.</li>
 </ul>
 <p>See example 4 in the <code>/examples/example4_include</code> <a href="https://github.com/doclet/texdoclet/tree/master/examples/example4_include">subdirectory</a> of the github project for more info.</p>
 <h2 id="previous-versions">Previous versions</h2>
